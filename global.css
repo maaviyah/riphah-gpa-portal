@@ -1,0 +1,374 @@
+/* --- Global Variables & Reset --- */
+:root {
+    --primary-blue: #1a365d;
+    --gov-blue: #2b6cb0;
+    --bg-gray: #f7fafc;
+    --text-dark: #2d3748;
+    --border-color: #e2e8f0;
+    --gold-accent: #ecc94b;
+    --danger-red: #c53030;
+    --card-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.hidden { display: none !important; }
+
+/* --- Refined Header Layout --- */
+header {
+    background: var(--primary-blue);
+    color: white;
+    padding: 30px 0 70px 0; /* Deep padding for the card overlap effect */
+    border-bottom: 5px solid var(--gold-accent);
+}
+
+/* Vertical Stack: Row 1 (Branding) | Row 2 (Navigation) */
+.header-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left aligned by default */
+    gap: 25px;
+}
+
+/* Logo & Identity Row */
+.logo-wrap {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header-logo {
+    height: 80px; /* Strong brand presence */
+    width: auto;
+    filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.header-text p {
+    margin: 8px 0 0;
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--gold-accent); /* Highlights the system description */
+    opacity: 1;
+}
+
+/* Navigation Row - Separated below identity */
+.nav-container {
+    display: flex;
+    gap: 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+    width: 100%;
+}
+
+.nav-btn {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    padding: 10px 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    background: rgba(255,255,255,0.05);
+}
+
+.nav-btn:hover, .nav-btn.active {
+    background: var(--gold-accent);
+    color: var(--primary-blue);
+    border-color: var(--gold-accent);
+    transform: translateY(-1px);
+}
+
+/* --- Global Button Components --- */
+.btn-primary {
+    background: var(--gov-blue);
+    color: white;
+    border: none;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    width: 100%;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: var(--primary-blue);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-secondary {
+    background: #ebf8ff;
+    border: 1px solid var(--gov-blue);
+    color: var(--gov-blue);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: #bee3f8;
+    color: var(--primary-blue);
+}
+
+/* Base Card Styling */
+.calculator-card {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    margin-top: -45px; /* Overlap into the blue header */
+    margin-bottom: 30px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid var(--border-color);
+    margin: 20px 0;
+}
+
+/* --- Comprehensive Main Footer --- */
+.main-footer {
+    background: #fff; /* White background to stand out from blue header */
+    border-top: 1px solid var(--border-color);
+    padding: 60px 0 30px 0;
+    margin-top: 60px; /* Space above footer */
+    color: var(--text-dark);
+}
+
+.footer-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* 1. Footer Brand Section */
+.footer-brand {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-wrap-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.footer-logo {
+    height: 50px; /* Smaller than header logo */
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+}
+
+.footer-brand h4 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: var(--primary-blue);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+    margin: 0 0 15px 0;
+}
+
+.footer-paragraph {
+    line-height: 0.1;
+    color: var(--text-dark);
+}
+
+/* Placeholder Social Icons (Style them as needed) */
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+/* 2. Footer Link Section */
+.footer-links {
+    flex: 1;
+}
+
+.main-footer h5 {
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    color: var(--primary-blue);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.footer-links a:hover {
+    color: var(--gov-blue);
+    text-decoration: underline;
+}
+
+/* 3. Footer Meta/Status Section */
+.footer-meta {
+    flex: 1;
+}
+
+.status-badge {
+    background: #e6fffa;
+    color: #008080;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.project-note {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 15px 0 0 0;
+}
+
+.github-link {
+    color: var(--gov-blue);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.github-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Bottom Row */
+.footer-divider {
+    border-color: rgba(0,0,0,0.05);
+    margin: 20px 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.compatibility-tag {
+    color: var(--gov-blue);
+    font-weight: 600;
+}
+
+.developer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    /*filter: invert(1);  If your icons are black, this makes them white for dark mode */
+    transition: transform 0.3s ease, filter 0.3s ease;
+    opacity: 0.8;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Subtle zoom on hover */
+    opacity: 1;
+    /* Optional: Add a glow color for each */
+}
+
+/* --- Mobile Responsive --- */
+@media (max-width: 650px) {
+    header { padding: 30px 0 60px 0; }
+    
+    .header-flex {
+        align-items: center; /* Center everything for mobile users */
+    }
+
+    .logo-wrap {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .header-text h1 { font-size: 1.8rem; }
+    
+    .nav-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-top: 15px;
+    }
+
+    .nav-btn {
+        flex: 1;
+        min-width: 100px;
+        text-align: center;
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .logo-wrap-footer {
+        justify-content: center;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

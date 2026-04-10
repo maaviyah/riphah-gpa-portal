@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="The official Riphahians GPA Portal. Calculate your SGPA and CGPA with our smart sliding-scale engine.">
+    <meta name="keywords" content="Riphah, GPA Calculator, SGPA, CGPA, Riphah International University, Shabang, GPA Portal">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riphahians GPA Portal | Smart Calculation Engine</title>
+    <link rel="shortcut icon" href="assets/img/logo/riphahians.ico" type="image/x-icon">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <div class="container header-flex">
+        <div class="logo-wrap">
+            <img src="assets/img/logo/riphahians.png" alt="University Logo" class="header-logo">
+            <div class="header-text">
+                <h1>Riphahians</h1>
+                <p>Grade Point Calculation System</p>
+            </div>
+        </div>
+
+        <nav class="nav-container">
+            <a href="index.html" class="nav-btn active">Calculator</a>
+            <a href="html/criteria.html" class="nav-btn">Criteria</a>
+            <a href="html/about.html" class="nav-btn">About</a>
+        </nav>
+    </div>
+</header>
+
+    <main class="container">
+        <section class="calculator-card">
+            <div class="card-header">
+                <h2>Semester GPA Calculator</h2>
+                <button type="button" id="add-course" class="btn-secondary">+ Add Course</button>
+            </div>
+            
+            <form id="gpa-form">
+                <div id="course-list">
+                    <div class="course-row">
+                        <input type="text" placeholder="Course Title" class="input-name">
+                        <div class="input-wrapper">
+                            <input type="number" placeholder="Obtained Marks" class="input-marks" min="0" max="100" required>
+                            <span class="live-grade">-</span>
+                        </div>
+                        <input type="number" placeholder="Credit Hrs" class="input-credits" min="1" max="6" required>
+                        <button type="button" class="remove-btn" aria-label="Remove Course">&times;</button>
+                    </div>
+                </div>
+
+                <div class="cgpa-section">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="include-cgpa"> 
+                        <span>Include Previous CGPA?</span>
+                    </label>
+                    <div id="cgpa-inputs" class="hidden">
+                        <input type="number" id="prev-cgpa" placeholder="Previous CGPA" step="0.01" min="0" max="4">
+                        <input type="number" id="total-credits" placeholder="Total Credit Hrs Earned" min="0">
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary">Calculate Result</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <h3>Calculation Summary</h3>
+            <hr class="divider">
+            <div class="result-grid">
+                <div class="result-item">
+                    <span>Semester GPA:</span>
+                    <strong id="display-gpa">0.00</strong>
+                </div>
+                <div id="display-cgpa-container" class="result-item hidden">
+                    <span>Cumulative GPA (CGPA):</span>
+                    <strong id="display-cgpa">0.00</strong>
+                </div>
+            </div>
+            <button id="close-modal" class="btn-primary">Dismiss</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="main-footer">
+    <div class="container">
+        <div class="footer-row">
+            
+            <div class="footer-brand">
+                <div class="logo-wrap-footer">
+                    <img src="assets/img/logo/riphahians.png" alt="Riphahians Logo" class="footer-logo">
+                    <h4>Riphahians</h4>
+                </div>
+                <p class="footer-tagline">Grade Point Calculation System</p>
+                <div class="developer-socials">
+                    <!--<a href="#" aria-label="LinkedIn"></a>-->
+                    <a href="https://github.com/maaviyah" target="_blank" class="social-link">
+                    <img src="assets/img/social-btn/Github-logo.png" alt="GitHub" class="social-icon">
+                </a>
+                <p class="footer-paragraph">Fork, Code, Contribute.</p>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h5>University Links</h5>
+                <ul>
+                    <li><a href="https://riphah.edu.pk" target="_blank">Official Website</a></li>
+                    <!--<li><a href="#" target="_blank">Student Portal (RIU)</a></li>-->
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h5>Sitemap</h5>
+                <ul>
+                    <li><a href="html/criteria.html">Grading Criteria</a></li>
+                    <li><a href="html/about.html">Report an Issue</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-meta">
+                <h5>Project Status</h5>
+                <p>
+                    <span class="status-badge">V1.0 | Initial Release</span>
+                </p>
+                <!--<p class="project-note">
+                    Based on 2026 Academic Policy<br>
+                    <a href="YOUR_GITHUB_REPO_URL" class="github-link">View Source Code</a>
+                </p>-->
+            </div>
+        </div>
+
+        <hr class="divider footer-divider">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Riphahians Project. Built by Students for Students.</p>
+            <p>
+                <span style="opacity:0.7">Compatibility:</span> 
+                <span class="compatibility-tag">Riphah International University</span>
+            </p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

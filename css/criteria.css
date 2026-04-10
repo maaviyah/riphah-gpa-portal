@@ -1,0 +1,96 @@
+/* Grading Table */
+.table-responsive { 
+    overflow-x: auto; 
+    margin-top: 20px; 
+}
+
+.grading-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    text-align: left; 
+}
+
+.grading-table th { 
+    background: var(--bg-gray); 
+    color: var(--primary-blue); 
+    padding: 12px; 
+    border-bottom: 2px solid var(--gov-blue); 
+}
+
+.grading-table td { 
+    padding: 12px; 
+    border-bottom: 1px solid var(--border-color); 
+}
+
+/* FIXED: Hover effect over rows */
+.grading-table tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+.grading-table tbody tr:hover {
+    background-color: #f1f5f9; /* Subtle slate blue hover */
+    cursor: default;
+}
+
+/* Legend */
+.legend-box { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 15px; 
+    margin-top: 25px; 
+    padding: 15px; 
+    background: #f8fafc; 
+    border-radius: 8px; 
+    border: 1px solid var(--border-color); 
+}
+
+.legend-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    font-size: 0.85rem; 
+    font-weight: 600; 
+}
+
+.dot { width: 12px; height: 12px; border-radius: 50%; }
+.dot.a { background: #38a169; }
+.dot.b { background: #3182ce; }
+.dot.c { background: #d69e2e; }
+.dot.d { background: #e53e3e; }
+.dot.f { background: #000; }
+
+/* Details/Accordion */
+.guide-detail { 
+    border: 1px solid var(--border-color); 
+    border-radius: 6px; 
+    margin-bottom: 10px; 
+    background: white; 
+}
+
+.guide-detail summary { 
+    padding: 15px; 
+    font-weight: 700; 
+    cursor: pointer; 
+    color: var(--primary-blue); 
+    list-style: none; 
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.guide-detail summary::after { content: '+'; color: var(--gov-blue); }
+.guide-detail[open] summary::after { content: '−'; }
+
+.guide-content { 
+    padding: 0 15px 15px 15px; 
+    border-top: 1px solid var(--border-color); 
+    font-size: 0.95rem; 
+}
+
+blockquote { 
+    border-left: 4px solid var(--gold-accent); 
+    margin: 15px 0; 
+    padding: 10px 15px; 
+    background: #fffaf0; 
+    font-style: italic; 
+}
+

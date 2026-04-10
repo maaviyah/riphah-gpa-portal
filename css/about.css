@@ -1,0 +1,157 @@
+/* Profile Section */
+.profile-card {
+    border-top: 5px solid var(--gov-blue);
+}
+
+.profile-layout {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.profile-info h2 {
+    margin-top: 0;
+    color: var(--primary-blue);
+}
+
+/* Image Wrapper and DP Styling */
+.profile-image-wrapper {
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.profile-dp {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid var(--gold-accent);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    background-color: #eee; /* Placeholder bg */
+}
+
+.profile-dp img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures your photo isn't stretched */
+}
+
+.profile-image-wrapper {
+    display: inline-block;
+    margin-top: -15px;
+    position: relative;
+    padding: 5px 0px;
+    border-radius: 20px;
+}
+
+.badge {
+   display: inline-block;
+    margin-top: 5px;
+    position: relative;
+    background: var(--primary-blue);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid white; 
+}
+
+/* Card Top Border */
+
+.card-top {
+    border-top: 5px solid var(--gov-blue);
+}
+
+/* FIXED: Social Buttons Styling */
+/*.social-links { 
+    display: flex; 
+    gap: 12px; 
+    margin-top: 25px; 
+}
+
+.social-links .btn-secondary {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border: 1.5px solid var(--gov-blue);
+}
+
+.social-links .btn-secondary:hover {
+    background: var(--gov-blue);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(43, 108, 176, 0.2);
+}*/
+
+/* FIXED: Symmetric Blockquote */
+blockquote {
+    border-left: 4px solid var(--gold-accent);
+    margin: 25px 0;
+    padding: 15px 20px;
+    background: #fffaf0; /* Warm highlight */
+    font-style: italic;
+    color: var(--text-dark);
+    line-height: 1.6;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+}
+
+/* Contribution Section */
+.contribution-box { 
+    background: #f8fafc; 
+    padding: 25px; 
+    border-radius: 10px; 
+    border: 1px solid var(--border-color); 
+    margin-top: 20px; 
+}
+
+.contribution-box h3 {
+    margin-top: 0;
+    color: var(--primary-blue);
+    font-size: 1.2rem;
+}
+
+.contribution-box ul {
+    margin-bottom: 25px;
+    padding-left: 20px;
+}
+
+.contribution-box li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.4; }
+
+/* GitHub Button in Contribution Box */
+.contribution-box .btn-primary {
+    display: inline-block;
+    width: auto;
+    text-decoration: none;
+    padding: 12px 30px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 650px) {
+    .profile-layout { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    
+    .social-links { 
+        justify-content: center; 
+        flex-wrap: wrap;
+    }
+
+    blockquote {
+        margin: 20px 10px;
+        font-size: 0.9rem;
+    }
+
+    .profile-dp {
+        width: 150px;
+        height: 150px;
+    }
+}
